@@ -21,7 +21,7 @@ public class OrderServiceImpl implements OrderService{
 
 	@Override
 	public Orders addOrder(Orders order) {
-		// TODO Auto-generated method stub
+		
 		Orders saveOrders= oRepo.save(order);
 		return saveOrders;
 	}

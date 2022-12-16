@@ -3,6 +3,8 @@ package com.masai.controller;
 import java.time.LocalDate;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +28,7 @@ public class OrderController {
 	private OrderService oService;
 	
 	@PostMapping("/orders")
-	public ResponseEntity<Orders> addOrderHandler(@RequestBody Orders order){
+	public ResponseEntity<Orders> addOrderHandler(@Valid @RequestBody Orders order){
 		Orders saveOrder= oService.addOrder(order);
 		return new ResponseEntity<Orders>(saveOrder,HttpStatus.CREATED);
 		

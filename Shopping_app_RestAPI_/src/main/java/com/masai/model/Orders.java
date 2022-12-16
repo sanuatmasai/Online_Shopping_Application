@@ -47,6 +47,7 @@ public class Orders {
 	@Embedded
 	private AddressDto orderAddress;
 	
+	@Embedded     //was not added later.
 	@ElementCollection
 	@CollectionTable(name = "order_productlist", joinColumns = @JoinColumn(name="order_id",referencedColumnName = "orderId"))
 	private List<ProductDto> productList = new ArrayList<>();

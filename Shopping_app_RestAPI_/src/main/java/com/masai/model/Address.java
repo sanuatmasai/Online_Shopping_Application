@@ -19,10 +19,7 @@ import net.bytebuddy.dynamic.loading.ClassReloadingStrategy.Strategy;
 
 @Entity
 @Data
-@Setter
-@Getter
 @NoArgsConstructor
-@ToString
 @AllArgsConstructor
 
 public class Address {

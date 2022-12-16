@@ -32,10 +32,7 @@ public class AddressServiceImpl implements AddressService{
 //	
 	@Override
 	public Address addAddress(Address address) throws AddressException {
-		
-		Address add=aDao.save(address);
-		
-		return add;
+		return aDao.save(address);
 	}
 
 	//===============================================================================
@@ -75,16 +72,8 @@ public class AddressServiceImpl implements AddressService{
 	
 	@Override
 	public Address updateAddress(Address address) throws AddressException {
-		
-		Optional<Address> opt= aDao.findById(address.getAddressId());
-		
-		if(opt.isPresent()) {
-			
-			Address updatedAddress= aDao.save(address);
-			return updatedAddress;
-			
-		}else
-			throw new AddressException("Invalid Address details..");
+		aDao.findById(address.getAddressId()).orElseThrow(() -> new AddressException("Invalid Address details.."));
+		return aDao.save(address);
 	
 	}
 
@@ -93,19 +82,11 @@ public class AddressServiceImpl implements AddressService{
 	@Override
 	public Address deleteAddressId(Integer addressId) throws AddressException {
 		
-		Optional<Address> opt= aDao.findById(addressId);
 		
-		if(opt.isPresent()) {
-			
-			Address existingAddress= opt.get();
-			aDao.delete(existingAddress);
-			
-			return existingAddress;
-			
-			
-		}else
-			throw new AddressException("Address does not exist with Id :"+addressId);
-
+		Address existingAddress = aDao.findById(addressId).orElseThrow(() -> new AddressException("Address does not exist with Id :"+addressId));
+		aDao.delete(existingAddress);
+		
+		return existingAddress;
 	}
 
 
@@ -116,7 +97,7 @@ public class AddressServiceImpl implements AddressService{
 		List<Address> address= aDao.findAll();
 		
 		if(address.size()==0)
-			throw new AddressException("No Address is there");
+			throw new AddressException("No Address is Available");
 		else
 		return address;
 	}
@@ -126,21 +107,7 @@ public class AddressServiceImpl implements AddressService{
 	@Override
 	public Address viewAddressById(Integer addressId)throws AddressException {
 		
-		Optional<Address> opt=aDao.findById(addressId);
+		return aDao.findById(addressId).orElseThrow(() -> new AddressException("Address does not exist with Id :"+addressId));
 		
-		if(opt.isPresent())
-		{
-			return opt.get();
-		}
-		else
-			throw new AddressException("Address doesn't Exist");
 	}
-
-
-
-	
-	
-	
-	
-	
 }

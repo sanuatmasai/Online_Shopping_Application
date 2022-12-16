@@ -34,7 +34,7 @@ public class Cart {
 	private Customer customer;
 	
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "cart_products",joinColumns = @JoinColumn(name="cart_id", referencedColumnName = "cartId"))
+//	@JoinTable(name = "cart_products",joinColumns = @JoinColumn(name="cart_id", referencedColumnName = "cartId"))
 	private List<ProductDto> products = new ArrayList<>();
 	
 

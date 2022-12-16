@@ -61,6 +61,7 @@ public class CartServiceImpl implements CartService{
 		if(pDao.findById(productId).isPresent())
 		{
 			product = pDao.findById(productId).get();
+			System.out.println(productId +".......line64");
 		}
 		else
 		{
@@ -164,8 +165,8 @@ public class CartServiceImpl implements CartService{
 				if(productdto.getProductId() == productId) {
 					
 					
-					
-					pDao.deleteById(productdto.getId());
+					//here made changes........
+					pDao.deleteById(productdto.getProductId());
 					
 					flag = true;
 					
