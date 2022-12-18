@@ -110,4 +110,14 @@ public class AddressServiceImpl implements AddressService{
 		return aDao.findById(addressId).orElseThrow(() -> new AddressException("Address does not exist with Id :"+addressId));
 		
 	}
+
+	@Override
+	public List<Address> getAllAddressByState(String state) throws AddressException {
+		List<Address> address= aDao.findByState(state);
+		
+		if(address.size()==0)
+			throw new AddressException("No Address is Available");
+		else
+		return address;
+	}
 }

@@ -15,8 +15,11 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.masai.exceptions.AddressException;
 import com.masai.exceptions.CustomerException;
+import com.masai.model.Address;
 import com.masai.model.Customer;
+import com.masai.service.AddressService;
 import com.masai.service.CustomerService;
 
 @RestController
@@ -24,6 +27,9 @@ public class CustomerController {
 	
 	@Autowired 
 	private CustomerService custService;
+	
+	@Autowired
+	private AddressService addressService;
 	
 	
 	@PostMapping("/customer")
@@ -64,9 +70,11 @@ public class CustomerController {
 	
 	
 	@GetMapping("/getcustomer")
-	public ResponseEntity<List<Customer>> getAllCustomer(@PathVariable("city") String location) throws CustomerException{
+	public ResponseEntity<List<Customer>> getAllCustomer() throws CustomerException{
 		
-		List<Customer> viewAll= custService.viewAllCustomers(location); 
+//		List<Address> addresses = addressService.getAllAddressByState(location);
+		
+		List<Customer> viewAll= custService.viewAllCustomers(); 
 		return new ResponseEntity<List<Customer>>(viewAll, HttpStatus.OK);
 	}
 	

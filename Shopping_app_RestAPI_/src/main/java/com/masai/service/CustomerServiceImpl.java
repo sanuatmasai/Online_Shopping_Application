@@ -76,12 +76,12 @@ public class CustomerServiceImpl implements CustomerService{
 	
 	
 	@Override
-	public List<Customer> viewAllCustomers(String location) throws CustomerException {
+	public List<Customer> viewAllCustomers() throws CustomerException {
 			
-		List<Customer> customerList= custDao.getCustomerByCity(location);
+		List<Customer> customerList= custDao.findAll();
 		
 		if(customerList.isEmpty()) {
-			throw new CustomerException("Customer not found in the location");
+			throw new CustomerException("No Customer available");
 			}
 		else 
 			return customerList;

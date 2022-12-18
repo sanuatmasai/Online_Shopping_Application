@@ -20,6 +20,8 @@ public interface AddressService {
 	
 	public List<Address> getAllAddress() throws AddressException;
 	
+	public List<Address> getAllAddressByState(String state) throws AddressException;
+	
 	public Address viewAddressById(Integer addressId)throws AddressException;
 	
 }
