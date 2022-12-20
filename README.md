@@ -1,10 +1,13 @@
 # Online_Shopping_Application(BadaBazar.com)
 <img src="https://github.com/sanuatmasai/Online_Shopping_Application/blob/main/Shopping_app_RestAPI_/Images/bus%20(2)%20(1).png" width="25%">
+
 # striped-hammer-7479
+
 BadaBazar.com is an  application which is used by admin and their Customer for online shopping 
 This application will help Customer to buy the products and view order details.
 Customer can register themselves and login. Add product to the cart and purchase it .
-This application will help Admin to search Product list ,add new products ,remove products and update product .
+This application will help Admin to search Product list ,add new products ,remove products and update products.
+
 # ER-Diagram:-
 
 ![SoulFood schema](https://github.com/sanuatmasai/Online_Shopping_Application/blob/main/Shopping_app_RestAPI_/Images/final%20ER%20diagram%20OSA%20(1).png)
