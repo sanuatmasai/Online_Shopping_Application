@@ -1,5 +1,5 @@
 # Online_Shopping_Application(BadaBazar.com)
-<img src="https://github.com/sanuatmasai/Online_Shopping_Application/blob/main/Shopping_app_RestAPI_/Images/bus%20(2)%20(1).png" width="50%">
+<img src="https://github.com/sanuatmasai/Online_Shopping_Application/blob/main/Shopping_app_RestAPI_/Images/bus%20(2)%20(1).png" width="25%">
 # striped-hammer-7479
 BadaBazar.com is an  application which is used by admin and their Customer for online shopping 
 This application will help Customer to buy the products and view order details.
