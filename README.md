@@ -5,13 +5,56 @@ BadaBazar.com is an  application which is used by admin and their Customer for o
 This application will help Customer to buy the products and view order details.
 Customer can register themselves and login. Add product to the cart and purchase it .
 This application will help Admin to search Product list ,add new products ,remove products and update product .
-<h2>Modules:</h2>
-	<p>Login Module</p>
-	<p>Customer Module</p>
-	<p>Product Module</p>
-	<p>Order Module</p>
-	<p>Cart Module</p>
-<img src="https://github.com/sanuatmasai/Online_Shopping_Application/blob/main/Shopping_app_RestAPI_/Images/final%20ER%20diagram%20OSA%20(1).png">
-</br>
+# ER-Diagram:-
 
-<!-- <img align="center" width="100%" height="500"  alt = "coding" width = "500"  src = "https://github.com/nitya-nb/Online-Hardware-and-software-support-system/blob/main/ERD/ERD%20Online%20Hardware%20and%20Software%20Support%20System_page-0001.jpg?raw=true"> -->
+![SoulFood schema](https://github.com/sanuatmasai/Online_Shopping_Application/blob/main/Shopping_app_RestAPI_/Images/final%20ER%20diagram%20OSA%20(1).png)
+
+# Modules 
+
+- Customer-Controller
+- Address-Controller
+- Product-Controller
+- Login-Controller
+- Cart-Controller
+- Order-Controller
+
+# Tech-Stack
+
+- Java
+- Spring Framework
+- Spring Boot
+- Spring Data JPA
+- Hibernate
+- MySQL
+
+# Customer-Controller
+
+![Customer Controller](https://github.com/sanuatmasai/Online_Shopping_Application/blob/main/Shopping_app_RestAPI_/Images/CustomerController.PNG)
+
+# Address-Controller
+
+![Address](https://github.com/sanuatmasai/Online_Shopping_Application/blob/main/Shopping_app_RestAPI_/Images/addressController.PNG)
+
+# Product-Controller
+
+![Product](https://github.com/sanuatmasai/Online_Shopping_Application/blob/main/Shopping_app_RestAPI_/Images/ProductController.PNG)
+
+# Login-Controller
+
+![Login](https://github.com/sanuatmasai/Online_Shopping_Application/blob/main/Shopping_app_RestAPI_/Images/LoginController.PNG)
+
+# Cart-Controller
+
+![Cart](https://github.com/sanuatmasai/Online_Shopping_Application/blob/main/Shopping_app_RestAPI_/Images/CartController.PNG)
+
+# Order-Controller
+
+![Order](https://github.com/sanuatmasai/Online_Shopping_Application/blob/main/Shopping_app_RestAPI_/Images/OrderController.PNG)
+
+# Team Members
+
+- fw20_0405 - Kumar Sanu
+- fw18_0214 - Chirumalla Rakesh
+- fw19_0599 - Rahul Somase
+- fw19_0784 - Sadanand Mare
+- fw19_1158 - Pradeep Basavaraj Kase
